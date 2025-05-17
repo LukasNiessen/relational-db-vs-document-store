@@ -146,7 +146,7 @@ Last note: This Locality isn't exclusive to document stores. For example Google 
 
 ## System Design Example 1: Financial Transaction System
 
-Note that I limit this example to the minimum so the article is not totally bloated. The code is incomplete on purpose.
+Note that I limit this example to the minimum so the article is not totally bloated. The code is incomplete on purpose. You can find complete code in the examples folder of the repo.
 
 ### Requirements
 
@@ -309,7 +309,7 @@ public class TransferService {
 
 ## System Design Example 2: Content Management System
 
-Note that I limit this example to the minimum so the article is not totally bloated. The code is incomplete on purpose.
+Note that I limit this example to the minimum so the article is not totally bloated. The code is incomplete on purpose. You can find complete code in the examples folder of the repo.
 
 A content management system.
 
