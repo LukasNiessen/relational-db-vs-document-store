@@ -5,7 +5,7 @@ What I go through in here is:
 1. Super quick refresher of what these two are
 2. Key differences
 3. Strengths and weaknesses
-4. System design examples
+4. System design examples (+ Spring Java code)
 5. Brief history
 
 In the examples, I choose a relational DB in the first, and a document-oriented DB in the other. The focus is on _why_ did I make that choice. I also provide some example code for both.
