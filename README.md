@@ -10,6 +10,8 @@ What I go through in here is:
 
 In the examples, I choose a relational DB in the first, and a document-oriented DB in the other. The focus is on _why_ did I make that choice. I also provide some example code for both.
 
+The examples are fully functional Spring Boot and React applications using Gradle as the build system. Detailed setup instructions are provided in each project's README.
+
 In the strengths and weaknesses part, I discuss both what _used to be one_ and how it looks nowadays.
 
 ## Super short summary
@@ -147,6 +149,13 @@ Last note: This Locality isn't exclusive to document stores. For example Google 
 ## System Design Example 1: Financial Transaction System
 
 Note that I limit this example to the minimum so the article is not totally bloated. The code is incomplete on purpose. You can find complete code in the examples folder of the repo.
+
+The examples folder contains two complete applications:
+
+1. `financial-transaction-system` - A Spring Boot and React application using a relational database (H2)
+2. `content-management-system` - A Spring Boot and React application using a document-oriented database (MongoDB)
+
+Each example has its own README.md file with instructions for running the applications.
 
 ### Requirements
 
