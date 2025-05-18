@@ -17,7 +17,7 @@ In the strengths and weaknesses part, I discuss both what _used to be a strength
 The two most common types of DBs are:
 
 - **Relational database (RDB)**: PostgreSQL, MySQL, MSSQL, Oracle DB, ...
-- **Document-oriented database (document store):** MongoDB, DynamoDB, Cassandra, CouchDB...
+- **Document-oriented database (document store):** MongoDB, DynamoDB, CouchDB...
 
 ### RDB
 
@@ -494,17 +494,17 @@ public class ContentService {
 
 ## Brief History of RDBs vs NoSQL
 
-RDBs originated from a revolutionizing paper of Edgar Codd in 1970. After a few years, RDBs dominated the world of DBs, mainly for their reliability and consistent structure.
+- Edgar Codd published a paper in 1970 proposing RDBs
+- RDBs became the leader of DBs, mainly due to their reliability
+- NoSQL emerged around 2009, companies like Facebook & Google developed custom solutions to handle their unprecedented scale. They published papers on their internal database systems, inspiring open-source alternatives like MongoDB, Cassandra, and Couchbase.
 
-NoSQL emerged around 2009 (the term actually came from a Twitter hashtag for a meetup about non-relational databases) as companies like Google, Amazon, and Facebook developed custom solutions to handle their unprecedented scale. They published papers on their internal database systems, inspiring open-source alternatives like MongoDB, Cassandra, and Couchbase.
+  - The term itself came from a Twitter hashtag actually
 
-The driving forces behind NoSQL adoption were:
+The main reasons for a _'NoSQL wish'_ were:
 
-- Need for horizontal scalability across many machines
-- More flexible data models for rapidly evolving applications
-- Performance optimization for specific query patterns
-- Lower operational costs for massive datasets
+- Need for horizontal scalability
+- More flexible data models
+- Performance optimization
+- Lower operational costs
 
-As mentioned already, most of these driving forces are not supported by RDBs as well, so the hard distinctions between RDBs and document stores are blurring.
-
-Most modern databases incorporate features from both.
+However, as mentioned already, nowadays RDBs support these things as well, so the clear distinctions between RDBs and document stores are becoming more and more blurry. Most modern databases incorporate features from both.
