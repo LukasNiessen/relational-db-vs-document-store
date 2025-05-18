@@ -21,7 +21,7 @@ The two most common types of DBs are:
 
 ### RDB
 
-The key idea is: **fit the data into a big table**. The columns are _properties_ and the rows are the _values_. By doing this, we have our data in a very structured way. So we have much power for querying the data (using SQL). That is, we can do all sorts of filters, joints etc. The way we arrange them into the table is called the _database schema_.
+The key idea is: **fit the data into a big table**. The columns are _properties_ and the rows are the _values_. By doing this, we have our data in a very structured way. So we have much power for querying the data (using SQL). That is, we can do all sorts of filters, joints etc. The _way_ we arrange the data into the table is called the _database schema_.
 
 #### Example table
 
