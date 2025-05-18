@@ -39,7 +39,7 @@ A database can have many tables.
 
 ### Document stores
 
-The key idea is: **just store that data as it is**. So suppose we have an object. We just convert it to a JSON and store it as it is. We call this data a _document_. It can be JSON, BSON (binary JSON) and XML too.
+The key idea is: **just store the data as it is**. Suppose we have an object. We just convert it to a JSON and store it as it is. We call this data a _document_. It's not limited to JSON though, it can also be BSON (binary JSON) or XML for example.
 
 #### Example document
 
@@ -55,7 +55,7 @@ The key idea is: **just store that data as it is**. So suppose we have an object
 }
 ```
 
-Each document is saved under a unique ID. This ID can sometimes be a path, for example in Google Cloud Firestore.
+Each document is saved under a unique ID. This ID can be a path, for example in Google Cloud Firestore, but doesn't have to be.
 
 Many documents _'in the same bucket'_ is called a _collection_. We can have many collections.
 
@@ -63,8 +63,8 @@ Many documents _'in the same bucket'_ is called a _collection_. We can have many
 
 #### Schema
 
-- RDBs have a fixed schema. Every row is the same _schema_.
-- Document stores don't have schemas. Each document can have a different _schema_.
+- RDBs have a fixed schema. Every row _'has the same schema'_.
+- Document stores don't have schemas. Each document can _'have a different schema'_.
 
 #### Data Structure
 
@@ -81,7 +81,7 @@ Many documents _'in the same bucket'_ is called a _collection_. We can have many
 
 - RDBs traditionally scale vertically (bigger/better machines)
   - Nowadays, the most common RDBs offer horizontal scaling as well (eg. PostgeSQL)
-- Document stores are designed for horizontal scaling (more machines) from the ground up
+- Document stores are great for horizontal scaling (more machines)
 
 #### Transaction Support
 
@@ -104,7 +104,7 @@ For this reason, I have put these points, that are supported in both, in **paren
 **Strengths:**
 
 - **Data Integrity**: Strong schema enforcement ensures data consistency
-- (**Complex Querying**: Excellent at complex joins and aggregations across multiple tables)
+- (**Complex Querying**: Great for complex joins and aggregations across multiple tables)
 - (**ACID**)
 
 **Weaknesses:**
@@ -138,22 +138,24 @@ For this reason, I have put these points, that are supported in both, in **paren
 
 I have listed locality as a strength and a weakness of document stores. Here is what I mean with this.
 
-In document storem, cocuments are typically stored as a single, continuous string, encoded in formats like JSON, XML, or binary variants such as MongoDB's BSON. This structure provides a locality advantage when applications need to access entire documents. Storing related data together minimizes disk seeks, unlike relational databases (RDBs) where data split across multiple tables - this requires multiple index lookups, increasing retrieval time.
+In document stores, cocuments are typically stored as a single, continuous string, encoded in formats like JSON, XML, or binary variants such as MongoDB's BSON. This structure provides a locality advantage when applications need to access entire documents. Storing related data together minimizes disk seeks, unlike relational databases (RDBs) where data split across multiple tables - this requires multiple index lookups, increasing retrieval time.
 
-However, it's only a benefit when we need (almost) the entire document at once. Document stores typically load the entire document, even if only a small part is accessed. This is inefficient for large documents. Similarly, updates often require rewriting the entire document. So keep these downsides small, make sure your documents are small.
+However, it's only a benefit when we need (almost) the entire document at once. Document stores typically load the entire document, even if only a small part is accessed. This is inefficient for large documents. Similarly, updates often require rewriting the entire document. So to keep these downsides small, make sure your documents are small.
 
-Last note: This Locality isn't exclusive to document stores. For example Google Spanner or Oracle achieve a similar locality in a relational model.
+Last note: Locality isn't exclusive to document stores. For example Google Spanner or Oracle achieve a similar locality in a relational model.
 
-## System Design Example 1: Financial Transaction System
+## System Design Examples
 
-Note that I limit this example to the minimum so the article is not totally bloated. The code is incomplete on purpose. You can find complete code in the examples folder of the repo.
+Note that I limit the examples to the minimum so the article is not totally bloated. The code is incomplete on purpose. You can find the complete code in the examples folder of the repo.
 
 The examples folder contains two complete applications:
 
 1. `financial-transaction-system` - A Spring Boot and React application using a relational database (H2)
 2. `content-management-system` - A Spring Boot and React application using a document-oriented database (MongoDB)
 
-Each example has its own README.md file with instructions for running the applications.
+Each example has its own README file with instructions for running the applications.
+
+## Example 1: Financial Transaction System
 
 ### Requirements
 
@@ -315,8 +317,6 @@ public class TransferService {
 ```
 
 ## System Design Example 2: Content Management System
-
-Note that I limit this example to the minimum so the article is not totally bloated. The code is incomplete on purpose. You can find complete code in the examples folder of the repo.
 
 A content management system.
 
