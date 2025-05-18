@@ -10,7 +10,7 @@ What I go through in here is:
 
 In the examples, I choose a relational DB in the first, and a document-oriented DB in the other. The focus is on _why_ did I make that choice. I also provide some example code for both.
 
-In the strengths and weaknesses part, I discuss both what _used to be one_ and how it looks nowadays.
+In the strengths and weaknesses part, I discuss both what _used to be a strength/weakness_ and how it looks nowadays.
 
 ## Super short summary
 
